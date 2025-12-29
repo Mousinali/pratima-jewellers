@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>New Pratima Jewellers</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="py-3 bg-transparent border-1 border-b border-[#6E4E33]/30 absolute top-0 left-0 w-full z-10">
+        <div class="container">
+            <nav class="hidden lg:block ">
+                <div class="mx-auto flex justify-between items-center">
+                    <!-- Logo -->
+                    <div class="w-[145px]">
+                        <a href="index.html"><img src="assets/images/logo/logo.png" class="h-[50px]" alt=""></a>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="flex gap-4 text-gray-800 font-medium items-center">
+                        <li>
+                            <a href="#"
+                                class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
+                                Home
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
+                                About Us
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+
+                        <li class="relative group m-2 mr-0">
+                            <a href="#"
+                                class="relative transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)] align-content-center">
+                                Products<i class="ri-arrow-drop-down-fill text-xl leading-1"></i>
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <ul
+                                class="absolute left-0 top-10 min-w-50 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 border border-gray-200 z-10 overflow-hidden pb-2 pt-1">
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Earrings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Necklace</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Rings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Bracelets</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
+                                Blogs
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
+                                Contact Us
+                                <span
+                                    class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Button -->
+                    <a class="btn1" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">Enquiry Now</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Mobile Navbar -->
+            <nav class="lg:hidden bg-transparent flex justify-between items-center">
+                <a href="#"><img src="assets/images/logo/logo.webp" class="h-[50px]" alt=""></a>
+
+                <!-- Hamburger Button -->
+                <div class="flex items-center gap-4 text-3xl">
+                    <button id="openMenu" class="p-1" aria-label="Open Menu">
+                        <i class="ri-menu-line cursor-pointer"></i>
+                    </button>
+                </div>
+
+            </nav>
+            <!-- Mobile Menu Backdrop -->
+            <div id="backdrop" class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-40">
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="fixed top-0 right-0 bottom-0 w-[320px] bg-white flex flex-col shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+
+                <!-- Header -->
+                <div class="flex justify-between items-center px-5 py-3 border-b border-gray-200">
+                    <img src="assets/images/logo/logo.webp" class="h-[36px]" alt="Logo">
+                    <button id="closeMenu" aria-label="Close Menu" class="cursor-pointer">
+                        <i class="ri-close-line text-3xl text-gray-700 hover:text-red-600"></i>
+                    </button>
+                </div>
+
+                <!-- Menu Items -->
+                <ul class="flex flex-col divide-y divide-dotted divide-gray-300">
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Home</a>
+                    </li>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">About
+                            Us</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Services</a>
+                    </li>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Plans</a>
+                    </li>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Health
+                            Blogs</a>
+                    </li>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Contact
+                            Us</a></li>
+                </ul>
+
+                <!-- Contact Info -->
+                <ul class="flex flex-col divide-y divide-dotted divide-gray-300 mt-2 text-sm border-t border-slate-200">
+                    <!-- Phone -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Phone
+                        </span>
+                        <p class="mt-1">
+                            <a href="tel:9163261134"
+                                class="text-[var(--secondary-color)] hover:underline font-medium">9163261134</a>
+                            <span class="text-gray-500 mx-1">/</span>
+                            <a href="tel:9830126400"
+                                class="text-[var(--secondary-color)] hover:underline font-medium">9830126400</a>
+                        </p>
+                    </li>
+
+                    <!-- Email -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Email
+                        </span>
+                        <p class="mt-1">
+                            <a href="mailto:info@healgene.life"
+                                class="block text-[var(--secondary-color)] hover:underline font-medium">info@healgene.life</a>
+                            <a href="mailto:healgene.life@gmail.com"
+                                class="block text-[var(--secondary-color)] hover:underline font-medium mt-2">healgene.life@gmail.com</a>
+                        </p>
+                    </li>
+                    <!-- Corporate Office -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            Corporate Office
+                        </span>
+                        <p class="mt-1 leading-relaxed text-gray-600">
+                            Regus, RDB Boulevard, 5th Floor, BP Block, Sector V, Bidhannagar,<br>
+                            Kolkata, West Bengal 700091
+                        </p>
+                    </li>
+
+                    <!-- City Office -->
+                    <li class="block px-5 py-3">
+                        <span class="text-sm font-medium text-gray-800">
+                            City Office
+                        </span>
+                        <p class="mt-1 leading-relaxed text-gray-600">
+                            FA-8, 2082, Rajdanga Main Road, Narkelbagan, Sector F, East Kolkata Township,<br>
+                            Kolkata, West Bengal 700107
+                        </p>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <section class="relative min-h-screen bg-[#F7EFEA] overflow-hidden">
+
+    <!-- Soft background accents -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ecdcd0] rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#e6d3c3] rounded-full blur-[120px]"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+
+            <!-- LEFT CONTENT -->
+            <div class="max-w-xl relative">
+
+                <!-- Eyebrow -->
+                <span class="hero-tag inline-flex items-center gap-3 mb-8 text-xs tracking-[0.45em] uppercase text-[#9c7c5d]">
+                    <span class="hero-line w-10 h-[1px] bg-[#9c7c5d]/60"></span>
+                    Fine Jewellery
+                </span>
+
+                <!-- Headline -->
+                <h1 class="split-text left text-[2.8rem] md:text-[4.5rem] font-serif text-[#2b1e16] leading-[1.12]">
+
+                    All the
+                    <span class="relative inline-block italic font-light px-2">
+                        Beauty
+                        <span class="hero-underline absolute inset-x-0 bottom-2 h-[14px] bg-[#ead9c9] -z-10"></span>
+                    </span>
+                    <br>
+                    Is in
+                    <span class="italic font-light tracking-wide">Your</span>
+                    Hands
+                </h1>
+
+                <!-- Divider -->
+                <div class="hero-divider mt-8 w-20 h-[1px] bg-[#9c7c5d]/40"></div>
+
+                <!-- Description -->
+                <p class="hero-text mt-8 text-lg text-[#6b5c4d] leading-[1.8]">
+                    Exquisitely handcrafted jewellery designed to celebrate heritage,
+                    romance, and modern sophistication — timeless pieces made to be
+                    treasured for generations.
+                </p>
+
+                <!-- CTA -->
+                <div class="hero-cta mt-14 flex flex-wrap items-center gap-10">
+                    <a href="#"
+                        class="group inline-flex items-center gap-3 px-10 py-4 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
+                        Explore Collection
+                        <span class="transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+
+                    <div class="text-sm text-[#9c7c5d] tracking-wide">
+                        Since 1998 · Certified Gold & Diamonds
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE GRID -->
+            <div class="relative">
+                <div class="grid grid-cols-2 gap-6">
+
+                    <div class="image overflow-hidden">
+                        <div class="reveal left custom-img aspect-square rounded-2xl overflow-hidden">
+                            <img src="assets/images/products/pro-1.jpeg" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+
+                    <div class="image overflow-hidden translate-y-8">
+                        <div class="reveal right custom-img aspect-square rounded-2xl overflow-hidden">
+                            <img src="assets/images/products/pro-2.jpeg" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+
+                    <div class="image overflow-hidden">
+                        <div class="reveal top custom-img aspect-square rounded-2xl overflow-hidden">
+                            <img src="assets/images/products/pro-3.jpeg" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+
+                    <div class="image overflow-hidden translate-y-8">
+                        <div class="reveal bottom custom-img aspect-square rounded-2xl overflow-hidden">
+                            <img src="assets/images/products/pro-4.jpeg" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/libs/gsap/gsap.js"></script>
+    <script src="assets/libs/gsap/scrolltrigger.js"></script>
+    <script src="assets/libs/gsap/split-text.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
