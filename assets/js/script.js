@@ -69,7 +69,7 @@ heroTL
     }, "-=0.6")
 
     // Headline
-
+   
     // Beauty underline reveal
     .from(".hero-underline", {
         scaleX: 0,
@@ -98,54 +98,148 @@ heroTL
         opacity: 0
     }, "-=0.3");
 
+//Image Zoom
+document.addEventListener("DOMContentLoaded", function () {
 
-// INITIAL STATE
-gsap.set(".reveal", {
-    autoAlpha: 0,
-    overflow: "hidden"
-});
 
-document.querySelectorAll(".reveal").forEach((container) => {
+    let revealContainers = document.querySelectorAll(".reveal");
 
-    let image = container.querySelector("img");
+    revealContainers.forEach((container) => {
 
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: container,
-            start: "top 85%",
-            toggleActions: "play none none none"
+        let image = container.querySelector(".custom-img img");
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        tl.set(container, { autoAlpha: 1 });
+
+        /* -----------------------------------
+           ZOOM OUT (EXISTING)
+        ----------------------------------- */
+        if (container.classList.contains("zoom-out")) {
+
+            tl.from(image, {
+                scale: 1.4,
+                duration: 1.5,
+                ease: "power2.out"
+            });
+
         }
+
+        /* -----------------------------------
+           LEFT / RIGHT (EXISTING)
+        ----------------------------------- */
+        else if (container.classList.contains("left") || container.classList.contains("right")) {
+
+            let xPercent = container.classList.contains("left") ? -100 : 100;
+
+            tl.from(container, {
+                xPercent: xPercent,
+                duration: 1.5,
+                ease: "power2.out"
+            })
+                .from(image, {
+                    xPercent: -xPercent,
+                    scale: 1.05,
+                    duration: 1.5,
+                    delay: -1.5,
+                    ease: "power2.out"
+                });
+
+        }
+
+        /* -----------------------------------
+           TOP
+        ----------------------------------- */
+        else if (container.classList.contains("top")) {
+
+            tl.from(container, {
+                yPercent: -100,
+                duration: 1.4,
+                ease: "power3.out"
+            })
+                .from(image, {
+                    yPercent: 40,
+                    scale: 1.1,
+                    duration: 1.4,
+                    delay: -1.4,
+                    ease: "power3.out"
+                });
+
+        }
+
+        /* -----------------------------------
+           BOTTOM
+        ----------------------------------- */
+        else if (container.classList.contains("bottom")) {
+
+            tl.from(container, {
+                yPercent: 100,
+                duration: 1.4,
+                ease: "power3.out"
+            })
+                .from(image, {
+                    yPercent: -40,
+                    scale: 1.1,
+                    duration: 1.4,
+                    delay: -1.4,
+                    ease: "power3.out"
+                });
+
+        }
+
+        /* -----------------------------------
+           TOP-LEFT (DIAGONAL – PREMIUM)
+        ----------------------------------- */
+        else if (container.classList.contains("tl")) {
+
+            tl.from(container, {
+                xPercent: -100,
+                yPercent: -100,
+                duration: 1.6,
+                ease: "power3.out"
+            })
+                .from(image, {
+                    xPercent: 40,
+                    yPercent: 40,
+                    scale: 1.2,
+                    duration: 1.6,
+                    delay: -1.6,
+                    ease: "power3.out"
+                });
+
+        }
+
+        /* -----------------------------------
+           BOTTOM-RIGHT (DIAGONAL)
+        ----------------------------------- */
+        else if (container.classList.contains("br")) {
+
+            tl.from(container, {
+                xPercent: 100,
+                yPercent: 100,
+                duration: 1.6,
+                ease: "power3.out"
+            })
+                .from(image, {
+                    xPercent: -40,
+                    yPercent: -40,
+                    scale: 1.2,
+                    duration: 1.6,
+                    delay: -1.6,
+                    ease: "power3.out"
+                });
+
+        }
+
     });
 
-    tl.to(container, { autoAlpha: 1, duration: 0.01 });
-
-    if (container.classList.contains("left")) {
-        tl.from(container, { xPercent: -100, duration: 1.5, ease: "power2.out" })
-            .from(image, { xPercent: 100, scale: 1.05, duration: 1.5, ease: "power2.out" }, "<");
-    }
-
-    else if (container.classList.contains("right")) {
-        tl.from(container, { xPercent: 100, duration: 1.5, ease: "power2.out" })
-            .from(image, { xPercent: -100, scale: 1.05, duration: 1.5, ease: "power2.out" }, "<");
-    }
-
-    else if (container.classList.contains("top")) {
-        tl.from(container, { yPercent: -100, duration: 1.4, ease: "power3.out" })
-            .from(image, { yPercent: 40, scale: 1.1, duration: 1.4, ease: "power3.out" }, "<");
-    }
-
-    else if (container.classList.contains("bottom")) {
-        tl.from(container, { yPercent: 100, duration: 1.4, ease: "power3.out" })
-            .from(image, { yPercent: -40, scale: 1.1, duration: 1.4, ease: "power3.out" }, "<");
-    }
 });
-
-// REFRESH AFTER IMAGES LOAD
-window.addEventListener("load", () => {
-    ScrollTrigger.refresh();
-});
-
-
 
 
 
