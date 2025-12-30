@@ -12,7 +12,8 @@
 
 <body>
 
-    <header class="py-3 bg-transparent border-1 border-b border-[#6E4E33]/30 absolute top-0 left-0 w-full z-10">
+    <!-- HEADER -->
+    <header class="py-3 bg-transparent border-1 border-b border-[#6E4E33]/30 absolute top-0 left-0 w-full z-[99]">
         <div class="container">
             <nav class="hidden lg:block ">
                 <div class="mx-auto flex justify-between items-center">
@@ -205,106 +206,431 @@
         </div>
     </header>
 
+    <!-- HERO -->
+    <section class="relative min-h-screen bg-[#F7EFEA] overflow-hidden content-center">
+        <!-- Soft background accents -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ecdcd0] rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#e6d3c3] rounded-full blur-[120px]"></div>
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-16 items-center ">
 
-    <section class="relative min-h-screen bg-[#F7EFEA] overflow-hidden">
+                <!-- LEFT CONTENT -->
+                <div class="max-w-xl relative">
+                    <span
+                        class="hero-tag inline-flex items-center gap-3 mb-8 font-medium text-xs tracking-[0.45em] uppercase text-[#866544]">
+                        <span class="hero-line w-10 h-[1px] bg-[#9c7c5d]/60"></span>
+                        Fine Jewellery
+                    </span>
 
-    <!-- Soft background accents -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ecdcd0] rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#e6d3c3] rounded-full blur-[120px]"></div>
+                    <!-- Headline -->
+                    <h1 class="split-text left text-[2.8rem] md:text-[4.5rem] my-font text-[#2b1e16] leading-[1.12]">
 
-    <div class="container mx-auto px-6 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+                        All the
+                        <span class="relative inline-block italic font-light px-2">
+                            Beauty
+                            <span class="hero-underline absolute inset-x-0 bottom-2 h-[14px] bg-[#ead9c9] -z-10"></span>
+                        </span>
+                        <br>
+                        Is In
+                        <span class="italic font-light tracking-wide">Your</span>
+                        Hands
+                    </h1>
 
-            <!-- LEFT CONTENT -->
-            <div class="max-w-xl relative">
+                    <!-- Divider -->
+                    <div class="hero-divider mt-8 w-20 h-[1px] bg-[#9c7c5d]/40"></div>
 
-                <!-- Eyebrow -->
-                <span class="hero-tag inline-flex items-center gap-3 mb-8 text-xs tracking-[0.45em] uppercase text-[#9c7c5d]">
-                    <span class="hero-line w-10 h-[1px] bg-[#9c7c5d]/60"></span>
+                    <!-- Description -->
+                    <p class="hero-text mt-8 text-lg text-[#6b5c4d] leading-[1.8]">
+                        Exquisitely handcrafted jewellery designed to celebrate heritage,
+                        romance, and modern sophistication — timeless pieces made to be
+                        treasured for generations.
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="hero-cta mt-14 flex flex-wrap items-center gap-10">
+                        <a href="#"
+                            class="group inline-flex items-center gap-3 px-10 py-4 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
+                            Explore Collection
+                            <span class="transition-transform group-hover:translate-x-1">→</span>
+                        </a>
+
+                        <div class="text-sm text-[#9c7c5d] tracking-wide">
+                            Since 1998 · Certified Gold & Diamonds
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT IMAGE GRID -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="image overflow-hidden">
+                            <div class="reveal left custom-img aspect-square rounded-2xl overflow-hidden">
+                                <img src="assets/images/products/pro-1.jpeg" class="w-full h-full object-cover" alt="">
+                            </div>
+                        </div>
+
+                        <div class="image overflow-hidden">
+                            <div class="reveal right custom-img aspect-square rounded-2xl  overflow-hidden">
+                                <img src="assets/images/products/pro-2.jpeg" class="w-full h-full object-cover" alt="">
+                            </div>
+                        </div>
+
+                        <div class="image overflow-hidden">
+                            <div class="reveal top custom-img aspect-square rounded-2xl  overflow-hidden">
+                                <img src="assets/images/products/pro-3.jpeg" class="w-full h-full object-cover" alt="">
+                            </div>
+                        </div>
+
+                        <div class="image overflow-hidden">
+                            <div class="reveal bottom custom-img aspect-square rounded-2xl overflow-hidden ">
+                                <img src="assets/images/products/pro-4.jpeg" class="w-full h-full object-cover" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <span class="absolute bottom-10 left-1/2 -translate-x-1/2 
+             w-[25px] h-[40px] 
+             border-2 border-[var(--primary-color)] 
+             rounded-[13px] rounded-bl-[20px] rounded-br-[20px]
+             lg:flex hidden items-center justify-center">
+
+            <span class="absolute bottom-[9px] 
+               w-[3px] h-[10px] 
+               bg-[var(--primary-color)] 
+               rounded-[2px]
+               animate-[mouseScroll_1.5s_linear_infinite]">
+            </span>
+
+        </span>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="relative py-20 bg-[#F6F3EF] overflow-hidden">
+        <div class="container mx-auto px-6 relative">
+            <!-- SECTION HEADING -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs tracking-widest uppercase text-[#9c7c5d]">
                     Fine Jewellery
                 </span>
-
-                <!-- Headline -->
-                <h1 class="split-text left text-[2.8rem] md:text-[4.5rem] font-serif text-[#2b1e16] leading-[1.12]">
-
-                    All the
-                    <span class="relative inline-block italic font-light px-2">
-                        Beauty
-                        <span class="hero-underline absolute inset-x-0 bottom-2 h-[14px] bg-[#ead9c9] -z-10"></span>
-                    </span>
-                    <br>
-                    Is in
-                    <span class="italic font-light tracking-wide">Your</span>
-                    Hands
-                </h1>
-
-                <!-- Divider -->
-                <div class="hero-divider mt-8 w-20 h-[1px] bg-[#9c7c5d]/40"></div>
-
-                <!-- Description -->
-                <p class="hero-text mt-8 text-lg text-[#6b5c4d] leading-[1.8]">
-                    Exquisitely handcrafted jewellery designed to celebrate heritage,
-                    romance, and modern sophistication — timeless pieces made to be
-                    treasured for generations.
+                <h2 class="text-4xl md:text-5xl font-light my-font text-[#2b1e16] mt-4">
+                    Explore Our Collection
+                </h2>
+                <p class="text-[#6b5c4d] mt-4">
+                    Crafted in gold, diamonds, and precious gemstones for timeless elegance.
                 </p>
+            </div>
 
-                <!-- CTA -->
-                <div class="hero-cta mt-14 flex flex-wrap items-center gap-10">
-                    <a href="#"
-                        class="group inline-flex items-center gap-3 px-10 py-4 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
-                        Explore Collection
-                        <span class="transition-transform group-hover:translate-x-1">→</span>
+            <!-- CATEGORY LIST -->
+            <ul class="relative z-10 divide-y divide-[#d8cfc6]">
+
+                <!-- ITEM -->
+                <li class="category-item group py-12 cursor-pointer relative">
+                    <a href="#" class="flex items-center justify-between relative">
+
+                        <!-- LEFT CONTENT -->
+                        <div>
+                            <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                Earrings
+                            </h3>
+                            <p class="mt-2 text-[#7a6a58] split-text left">
+                                Elegant designs for every occasion
+                            </p>
+                        </div>
+
+                        <!-- RIGHT ARROW -->
+                        <div class="w-14 h-14 rounded-full border border-[#9c7c5d]
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-[#9c7c5d]">
+                            <svg class="w-5 h-5 text-[#9c7c5d] group-hover:text-white transition-all duration-300"
+                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+
+                        <!-- CURSOR IMAGE -->
+                        <img class="cursor-image" src="assets/images/products/pro-1.jpeg" alt="Earrings">
                     </a>
+                </li>
 
-                    <div class="text-sm text-[#9c7c5d] tracking-wide">
-                        Since 1998 · Certified Gold & Diamonds
-                    </div>
-                </div>
+                <!-- Rings -->
+                <li class="category-item group py-12 cursor-pointer relative">
+                    <a href="#" class="flex items-center justify-between">
 
-            </div>
-
-            <!-- RIGHT IMAGE GRID -->
-            <div class="relative">
-                <div class="grid grid-cols-2 gap-6">
-
-                    <div class="image overflow-hidden">
-                        <div class="reveal left custom-img aspect-square rounded-2xl overflow-hidden">
-                            <img src="assets/images/products/pro-1.jpeg" class="w-full h-full object-cover" alt="">
+                        <div>
+                            <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                Rings
+                            </h3>
+                            <p class="mt-2 text-[#7a6a58] split-text left">
+                                Crafted symbols of love and commitment
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="image overflow-hidden">
-                        <div class="reveal right custom-img aspect-square rounded-2xl overflow-hidden">
-                            <img src="assets/images/products/pro-2.jpeg" class="w-full h-full object-cover" alt="">
+                        <div class="w-14 h-14 rounded-full border border-[#9c7c5d]
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-[#9c7c5d]">
+                            <svg class="w-5 h-5 text-[#9c7c5d] group-hover:text-white transition-all duration-300"
+                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
                         </div>
-                    </div>
 
-                    <div class="image overflow-hidden">
-                        <div class="reveal top custom-img aspect-square rounded-2xl overflow-hidden">
-                            <img src="assets/images/products/pro-3.jpeg" class="w-full h-full object-cover" alt="">
+                        <img class="cursor-image" src="assets/images/products/pro-2.jpeg" alt="Rings">
+                    </a>
+                </li>
+
+                <!-- Necklaces -->
+                <li class="category-item group py-12 cursor-pointer relative">
+                    <a href="#" class="flex items-center justify-between">
+
+                        <div>
+                            <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                Necklaces
+                            </h3>
+                            <p class="mt-2 text-[#7a6a58] split-text left">
+                                Timeless elegance in every strand
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="image overflow-hidden">
-                        <div class="reveal bottom custom-img aspect-square rounded-2xl overflow-hidden ">
-                            <img src="assets/images/products/pro-4.jpeg" class="w-full h-full object-cover" alt="">
+                        <div class="w-14 h-14 rounded-full border border-[#9c7c5d]
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-[#9c7c5d]">
+                            <svg class="w-5 h-5 text-[#9c7c5d] group-hover:text-white transition-all duration-300"
+                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
                         </div>
-                    </div>
 
-                </div>
-            </div>
+                        <img class="cursor-image" src="assets/images/products/pro-3.jpeg" alt="Necklaces">
+                    </a>
+                </li>
 
+                <!-- Bracelets -->
+                <li class="category-item group py-12 cursor-pointer relative">
+                    <a href="#" class="flex items-center justify-between">
+
+                        <div>
+                            <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                Bracelets
+                            </h3>
+                            <p class="mt-2 text-[#7a6a58] split-text left">
+                                Refined accents for modern style
+                            </p>
+                        </div>
+
+                        <div class="w-14 h-14 rounded-full border border-[#9c7c5d]
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-[#9c7c5d]">
+                            <svg class="w-5 h-5 text-[#9c7c5d] group-hover:text-white transition-all duration-300"
+                                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+
+                        <img class="cursor-image" src="assets/images/products/pro-4.jpeg" alt="Bracelets">
+                    </a>
+                </li>
+
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
 
+    <section class="bg-[#F6F3EF] pb-24">
+        <div class="container">
 
+            <!-- SECTION HEADER -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs tracking-widest uppercase text-[#9c7c5d]">
+                    Popular Picks
+                </span>
+                <h2 class="text-4xl md:text-5xl font-light my-font text-[#2b1e16] mt-4">
+                    Our Most Loved Jewellery
+                </h2>
+                <p class="text-[#6b5c4d] mt-4">
+                    Timeless pieces chosen by our customers for everyday elegance
+                    and special occasions.
+                </p>
+            </div>
 
+            <!-- PRODUCT GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-12">
 
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
 
+                        <img src="assets/images/products/pro-1.jpeg" alt="Diamond Necklace"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
 
+                    <!-- PRODUCT INFO -->
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Diamond Floral Necklace
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            18K Gold · Diamonds
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹1,25,000
+                        </p>
+                    </div>
+                </a>
 
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-2.jpeg" alt="Gold Bangles"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Classic Gold Bangles
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            22K Gold
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹98,000
+                        </p>
+                    </div>
+                </a>
+
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-3.jpeg" alt="Diamond Earrings"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Diamond Drop Earrings
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            18K Gold · Diamonds
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹72,000
+                        </p>
+                    </div>
+                </a>
+
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-4.jpeg" alt="Engagement Ring"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Solitaire Engagement Ring
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            Platinum · Diamond
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹1,45,000
+                        </p>
+                    </div>
+                </a>
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+
+                        <img src="assets/images/products/pro-1.jpeg" alt="Diamond Necklace"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+
+                    <!-- PRODUCT INFO -->
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Diamond Floral Necklace
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            18K Gold · Diamonds
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹1,25,000
+                        </p>
+                    </div>
+                </a>
+
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-2.jpeg" alt="Gold Bangles"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Classic Gold Bangles
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            22K Gold
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹98,000
+                        </p>
+                    </div>
+                </a>
+
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-3.jpeg" alt="Diamond Earrings"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Diamond Drop Earrings
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            18K Gold · Diamonds
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹72,000
+                        </p>
+                    </div>
+                </a>
+
+                <!-- PRODUCT CARD -->
+                <a href="#" class="group product-item inline-block relative cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="assets/images/products/pro-4.jpeg" alt="Engagement Ring"
+                            class="aspect-square rounded-2xl object-cover transition-transform duration-700">
+                    </div>
+                    <div class="pt-5 text-center">
+                        <h3 class="text-lg font-light text-[#2b1e16]">
+                            Solitaire Engagement Ring
+                        </h3>
+                        <p class="text-sm text-[#6b5c4d] mt-1">
+                            Platinum · Diamond
+                        </p>
+                        <p class="text-base text-[#2b1e16] mt-2 font-medium">
+                            ₹1,45,000
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="text-center mt-16">
+                <a href="#"
+                    class="group inline-flex items-center gap-3 px-10 py-4 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
+                    VIEW MORE
+                    <span class="transition-transform group-hover:translate-x-1">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -320,6 +646,7 @@
     <script src="assets/libs/gsap/scrolltrigger.js"></script>
     <script src="assets/libs/gsap/split-text.js"></script>
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

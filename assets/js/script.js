@@ -9,99 +9,87 @@
 // }
 
 
-
-const openBtn = document.getElementById("openMenu");
-const closeBtn = document.getElementById("closeMenu");
-const mobileMenu = document.getElementById("mobileMenu");
-const backdrop = document.getElementById("backdrop");
-const body = document.body;
-
-openBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-x-full");
-    mobileMenu.classList.add("translate-x-0");
-    backdrop.classList.remove("opacity-0", "invisible");
-    backdrop.classList.add("opacity-100", "visible");
-
-    // Disable scrolling
-    body.classList.add("overflow-hidden");
-});
-
-closeBtn.addEventListener("click", closeMenuHandler);
-backdrop.addEventListener("click", closeMenuHandler);
-
-function closeMenuHandler() {
-    mobileMenu.classList.add("translate-x-full");
-    mobileMenu.classList.remove("translate-x-0");
-    backdrop.classList.add("opacity-0", "invisible");
-    backdrop.classList.remove("opacity-100", "visible");
-
-    // Re-enable scrolling
-    body.classList.remove("overflow-hidden");
-}
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
-// MASTER TIMELINE
-const heroTL = gsap.timeline({
-    defaults: {
-        ease: "power3.out",
-        duration: 1.2
+function mobileMenu() {
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const backdrop = document.getElementById("backdrop");
+    const body = document.body;
+
+    openBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+        backdrop.classList.remove("opacity-0", "invisible");
+        backdrop.classList.add("opacity-100", "visible");
+
+        // Disable scrolling
+        body.classList.add("overflow-hidden");
+    });
+
+    closeBtn.addEventListener("click", closeMenuHandler);
+    backdrop.addEventListener("click", closeMenuHandler);
+
+    function closeMenuHandler() {
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenu.classList.remove("translate-x-0");
+        backdrop.classList.add("opacity-0", "invisible");
+        backdrop.classList.remove("opacity-100", "visible");
+        body.classList.remove("overflow-hidden");
     }
-});
+}
+mobileMenu()
 
-// LEFT CONTENT
-heroTL
-    // Eyebrow text
-    .from(".hero-tag", {
-        y: 20,
-        opacity: 0
-    })
+function heroAnimation() {
+    const heroTL = gsap.timeline({
+        defaults: {
+            ease: "power3.out",
+            duration: 1.2
+        }
+    });
 
-    // Eyebrow line (draw effect)
-    .from(".hero-line", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        duration: 0.8,
-        ease: "power2.out"
-    }, "-=0.6")
+    heroTL
+        .from(".hero-tag", {
+            y: 20,
+            opacity: 0
+        })
 
-    // Headline
-   
-    // Beauty underline reveal
-    .from(".hero-underline", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        duration: 0.8,
-        ease: "power3.out"
-    }, "-=0.7")
+        .from(".hero-line", {
+            scaleX: 0,
+            transformOrigin: "left center",
+            duration: 0.8,
+            ease: "power2.out"
+        }, "-=0.6")
 
-    // Divider line
-    .from(".hero-divider", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        duration: 0.8,
-        ease: "power2.out"
-    }, "-=0.6")
+        .from(".hero-underline", {
+            scaleX: 0,
+            transformOrigin: "left center",
+            duration: 0.8,
+            ease: "power3.out"
+        }, "-=0.7")
 
-    // Description
-    .from(".hero-text", {
-        y: 30,
-        opacity: 0
-    }, "-=0.4")
+        .from(".hero-divider", {
+            scaleX: 0,
+            transformOrigin: "left center",
+            duration: 0.8,
+            ease: "power2.out"
+        }, "-=0.6")
 
-    // CTA
-    .from(".hero-cta", {
-        y: 20,
-        opacity: 0
-    }, "-=0.3");
+        .from(".hero-text", {
+            y: 30,
+            opacity: 0
+        }, "-=0.4")
+
+        .from(".hero-cta", {
+            y: 20,
+            opacity: 0
+        }, "-=0.3");
+}
+heroAnimation()
 
 //Image Zoom
-document.addEventListener("DOMContentLoaded", function () {
-
-
+function revealImage() {
     let revealContainers = document.querySelectorAll(".reveal");
 
     revealContainers.forEach((container) => {
@@ -117,10 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         tl.set(container, { autoAlpha: 1 });
-
-        /* -----------------------------------
-           ZOOM OUT (EXISTING)
-        ----------------------------------- */
         if (container.classList.contains("zoom-out")) {
 
             tl.from(image, {
@@ -130,10 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
         }
-
-        /* -----------------------------------
-           LEFT / RIGHT (EXISTING)
-        ----------------------------------- */
         else if (container.classList.contains("left") || container.classList.contains("right")) {
 
             let xPercent = container.classList.contains("left") ? -100 : 100;
@@ -152,10 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
         }
-
-        /* -----------------------------------
-           TOP
-        ----------------------------------- */
         else if (container.classList.contains("top")) {
 
             tl.from(container, {
@@ -172,10 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
         }
-
-        /* -----------------------------------
-           BOTTOM
-        ----------------------------------- */
         else if (container.classList.contains("bottom")) {
 
             tl.from(container, {
@@ -193,9 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-        /* -----------------------------------
-           TOP-LEFT (DIAGONAL – PREMIUM)
-        ----------------------------------- */
         else if (container.classList.contains("tl")) {
 
             tl.from(container, {
@@ -214,10 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
         }
-
-        /* -----------------------------------
-           BOTTOM-RIGHT (DIAGONAL)
-        ----------------------------------- */
         else if (container.classList.contains("br")) {
 
             tl.from(container, {
@@ -238,14 +203,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+}
+revealImage()
 
-});
-
-
-
-// Split text animation
-document.addEventListener("DOMContentLoaded", function () {
-
+function mySplitText() {
     const st = document.querySelectorAll(".split-text");
 
     if (st.length > 0) {
@@ -293,10 +254,168 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+}
+mySplitText()
 
-});
+function categoryHover() {
+    gsap.set(".cursor-image", {
+        xPercent: -50,
+        yPercent: -50,
+        autoAlpha: 0,
+        scale: 0.95,
+        filter: "blur(8px)"
+    });
+
+    let firstEnter = false;
+
+    gsap.utils.toArray(".category-item").forEach((item) => {
+
+        const image = item.querySelector(".cursor-image");
+
+        const setX = gsap.quickTo(image, "x", {
+            duration: 0.5,
+            ease: "expo.out",
+            overwrite: true
+        });
+
+        const setY = gsap.quickTo(image, "y", {
+            duration: 0.5,
+            ease: "expo.out",
+            overwrite: true
+        });
+
+        const align = (e) => {
+            if (firstEnter) {
+                gsap.set(image, {
+                    x: e.clientX,
+                    y: e.clientY
+                });
+                firstEnter = false;
+            } else {
+                setX(e.clientX);
+                setY(e.clientY);
+            }
+        };
+
+        const startFollow = () =>
+            document.addEventListener("mousemove", align);
+
+        const stopFollow = () =>
+            document.removeEventListener("mousemove", align);
+
+        const fade = gsap.to(image, {
+            autoAlpha: 1,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.25,
+            ease: "power2.out",
+            paused: true,
+            onReverseComplete: stopFollow
+        });
+
+        item.addEventListener("mouseenter", (e) => {
+            firstEnter = true;
+            fade.play();
+            startFollow();
+            align(e);
+        });
+
+        item.addEventListener("mouseleave", () => {
+            fade.reverse();
+        });
+    });
+}
+categoryHover()
 
 
+function productSection() {
+    gsap.from(".product-item", {
+        opacity: 0,
+        y: 80,
+        rotateX: 15,
+        duration: 1.4,
+        ease: "power4.out",
+        stagger: 0.15,
+        scrollTrigger: {
+            trigger: ".product-item",
+            start: "top 85%",
+            once: true
+        }
+    });
 
+    gsap.utils.toArray(".product-item").forEach(card => {
+
+        const image = card.querySelector("img");
+        const bounds = () => card.getBoundingClientRect();
+
+        card.addEventListener("mousemove", (e) => {
+            const b = bounds();
+            const relX = e.clientX - b.left;
+            const relY = e.clientY - b.top;
+
+            const moveX = (relX - b.width / 2) * 0.08;
+            const moveY = (relY - b.height / 2) * 0.08;
+
+            const rotateX = -(relY / b.height - 0.5) * 12;
+            const rotateY = (relX / b.width - 0.5) * 12;
+
+            gsap.to(card, {
+                x: moveX,
+                y: moveY,
+                rotateX: rotateX,
+                rotateY: rotateY,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+
+            gsap.to(image, {
+                scale: 1.1,
+                x: moveX * 0.6,
+                y: moveY * 0.6,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+        });
+
+        card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+                scale: 1.02,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+        });
+
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+                x: 0,
+                y: 0,
+                rotateX: 0,
+                rotateY: 0,
+                scale: 1,
+                duration: 0.8,
+                ease: "expo.out"
+            });
+
+            gsap.to(image, {
+                scale: 1,
+                x: 0,
+                y: 0,
+                duration: 0.8,
+                ease: "expo.out"
+            });
+        });
+    });
+
+    gsap.utils.toArray(".product-item img").forEach(img => {
+        gsap.to(img, {
+            y: "+=12",
+            duration: 4,
+            ease: "sine.inOut",
+            repeat: -1,
+            yoyo: true
+        });
+    });
+}
+productSection()
 
 

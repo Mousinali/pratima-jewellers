@@ -149,3 +149,46 @@ body {
 .hero-underline {
     will-change: transform;
 }
+
+@keyframes mouseScroll {
+    0% {
+        bottom: 9px;
+    }
+
+    50% {
+        bottom: 5px;
+        opacity: 0.2;
+    }
+
+    100% {
+        bottom: 9px;
+    }
+}
+
+.cursor-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0;
+    border-radius: 2rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    will-change: transform, opacity, filter;
+}
+
+.product-item {
+    perspective: 1000px;
+}
+
+.product-image {
+    will-change: transform;
+}
+
+.product-item img {
+    transform-style: preserve-3d;
+}
