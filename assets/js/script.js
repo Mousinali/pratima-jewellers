@@ -11,6 +11,33 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+function magneticButton() {
+    document.querySelectorAll(".magnetic-btn").forEach(btn => {
+        btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            gsap.to(btn, {
+                x: x * 0.3,
+                y: y * 0.3,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            gsap.to(btn, {
+                x: 0,
+                y: 0,
+                duration: 0.6,
+                ease: "elastic.out(1, 0.4)"
+            });
+        });
+    });
+}
+magneticButton()
+
 function mobileMenu() {
     const openBtn = document.getElementById("openMenu");
     const closeBtn = document.getElementById("closeMenu");
@@ -418,4 +445,119 @@ function productSection() {
 }
 productSection()
 
+function cta() {
+    gsap.from(".cta-label", {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        scrollTrigger: { trigger: ".cta", start: "top 75%" }
+    });
 
+    gsap.from(".cta-desc", {
+        opacity: 0,
+        y: 30,
+        delay: 0.3,
+        duration: 1,
+        scrollTrigger: { trigger: ".cta", start: "top 75%" }
+    });
+
+    gsap.from(".magnetic-btn", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        delay: 0.6,
+        scrollTrigger: { trigger: ".cta", start: "top 75%" }
+    });
+
+    /* ===== BREATHING GOLD ORB ===== */
+    gsap.to(".gold-orb", {
+        scale: 1.15,
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+    /* ===== MOUSE TRACK GOLD LIGHT ===== */
+    const orb = document.querySelector(".gold-orb");
+
+    document.addEventListener("mousemove", (e) => {
+        gsap.to(orb, {
+            x: (e.clientX - window.innerWidth / 2) * 0.4,
+            y: (e.clientY - window.innerHeight / 2) * 0.4,
+            duration: 1,
+            ease: "power3.out"
+        });
+    });
+}
+cta()
+
+function testimonialAnimation() {
+    gsap.from(".lux-card", {
+        scrollTrigger: {
+            trigger: ".luxury-testimonials",
+            start: "top 80%",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1.4,
+        ease: "power2.out",
+        stagger: 0.15,
+    });
+}
+testimonialAnimation()
+
+function whyChooseUs() {
+    gsap.utils.toArray(".floating-img").forEach((img, i) => {
+
+        gsap.fromTo(img,
+            {
+                y: 60,
+                opacity: 0,
+                scale: 0.9
+            },
+            {
+                y: -40,
+                opacity: 1,
+                scale: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top 85%",
+                    end: "bottom 50%",
+                    scrub: 1
+                }
+            }
+        );
+
+    });
+}
+whyChooseUs()
+
+function blogsAnimation() {
+    gsap.from(".blog-heading > *", {
+        scrollTrigger: {
+            trigger: ".blog-heading",
+            start: "top 80%",
+        },
+        opacity: 0,
+        y: 40,
+        duration: 1.4,
+        ease: "power3.out",
+        stagger: 0.15
+    });
+
+    /* BLOG CARDS */
+    gsap.from(".blog-card", {
+        scrollTrigger: {
+            trigger: ".blog-card",
+            start: "top 85%",
+        },
+        opacity: 0,
+        y: 60,
+        scale: 0.94,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.2
+    });
+}
