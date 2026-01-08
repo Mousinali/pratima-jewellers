@@ -192,12 +192,40 @@ body {
 .product-item img {
     transform-style: preserve-3d;
 }
+
 .floating-img {
     animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+@media (max-width: 1440px) {
+    .hero-container {
+        padding-top: 4rem;
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1276px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-container {
+        padding-top: 7rem;
+    }
 }

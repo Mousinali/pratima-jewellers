@@ -8,6 +8,20 @@
 //     }
 // }
 
+document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const submenu = btn.nextElementSibling;
+        const icon = btn.querySelector("i");
+
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null;
+            icon.classList.remove("rotate-180");
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            icon.classList.add("rotate-180");
+        }
+    });
+});
 
 gsap.registerPlugin(ScrollTrigger);
 

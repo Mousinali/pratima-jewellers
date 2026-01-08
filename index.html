@@ -53,7 +53,7 @@
                         <li class="relative group m-2 mr-0">
                             <a href="#"
                                 class="relative transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)] align-content-center">
-                                Products<i class="ri-arrow-drop-down-fill text-xl leading-1"></i>
+                                Products<i class="ri-arrow-drop-down-fill text-xl leading-1 hidden xl:inline-block"></i>
                                 <span
                                     class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--secondary-color)] transition-all duration-300 group-hover:w-full"></span>
                             </a>
@@ -111,7 +111,7 @@
 
             <!-- Mobile Navbar -->
             <nav class="lg:hidden bg-transparent flex justify-between items-center">
-                <a href="#"><img src="assets/images/logo/logo.webp" class="h-[50px]" alt=""></a>
+                <a href="#"><img src="assets/images/logo/logo.png" class="h-[50px]" alt=""></a>
 
                 <!-- Hamburger Button -->
                 <div class="flex items-center gap-4 text-3xl">
@@ -131,7 +131,7 @@
 
                 <!-- Header -->
                 <div class="flex justify-between items-center px-5 py-3 border-b border-gray-200">
-                    <img src="assets/images/logo/logo.webp" class="h-[36px]" alt="Logo">
+                    <img src="assets/images/logo/logo.png" class="h-[36px]" alt="Logo">
                     <button id="closeMenu" aria-label="Close Menu" class="cursor-pointer">
                         <i class="ri-close-line text-3xl text-gray-700 hover:text-red-600"></i>
                     </button>
@@ -144,13 +144,23 @@
                     <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">About
                             Us</a>
                     </li>
-                    <li><a href="#"
-                            class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Services</a>
+                     <li class="relative">
+                        <button class="w-full px-5 py-3 flex justify-between items-center dropdown-toggle">
+                            <span>Products</span>
+                            <i class="ri-arrow-down-s-line text-xl transition-transform duration-300"></i>
+                        </button>
+
+                        <ul
+                            class="submenu max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 pl-10 list-disc">
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">All Products</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Necklace</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Rings</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Earrings</a></li>
+                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Bracelet</a></li>
+                        </ul>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Plans</a>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Health
-                            Blogs</a>
+                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Blogs</a>
                     </li>
                     <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Contact
                             Us</a></li>
@@ -220,8 +230,8 @@
             <!-- Soft background accents -->
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ecdcd0] rounded-full blur-[120px]"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#e6d3c3] rounded-full blur-[120px]"></div>
-            <div class="container">
-                <div class="grid lg:grid-cols-2 gap-16 items-center ">
+            <div class="container hero-container">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                     <!-- LEFT CONTENT -->
                     <div class="max-w-xl relative">
@@ -233,7 +243,7 @@
 
                         <!-- Headline -->
                         <h1
-                            class="split-text left text-[2.8rem] md:text-[4.5rem] my-font text-[#2b1e16] leading-[1.12]">
+                            class="split-text left text-[2.35rem] sm:text-[2.8rem] lg:text-6xl 2xl:text-[4.5rem] my-font text-[#2b1e16] leading-[1.12]">
 
                             All the
                             <span class="relative inline-block italic font-light px-2">
@@ -248,17 +258,17 @@
                         </h1>
 
                         <!-- Divider -->
-                        <div class="hero-divider mt-8 w-20 h-[1px] bg-[#9c7c5d]/40"></div>
+                        <div class="hero-divider 2xl:mt-8 mt-4 w-20 h-[1px] bg-[#9c7c5d]/40"></div>
 
                         <!-- Description -->
-                        <p class="hero-text mt-8 text-lg text-[#6b5c4d] leading-[1.8]">
+                        <p class="hero-text 2xl:mt-8 mt-4 text-lg text-[#6b5c4d] leading-[1.8]">
                             Exquisitely handcrafted jewellery designed to celebrate heritage,
                             romance, and modern sophistication — timeless pieces made to be
                             treasured for generations.
                         </p>
 
                         <!-- CTA -->
-                        <div class="hero-cta mt-14 flex flex-wrap items-center gap-10">
+                        <div class="hero-cta 2xl:mt-14 mt-10 flex flex-wrap items-center gap-10">
                             <a href="#"
                                 class="group inline-flex items-center gap-3 px-10 py-4 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
                                 Explore Collection
@@ -273,32 +283,32 @@
                     </div>
 
                     <!-- RIGHT IMAGE GRID -->
-                    <div class="relative">
+                    <div class="relative 2xl:pr-0 lg:pl-20">
                         <div class="grid grid-cols-2 gap-6">
                             <div class="image overflow-hidden">
                                 <div class="reveal left custom-img aspect-square rounded-2xl overflow-hidden">
-                                    <img src="assets/images/products/pro-1.jpeg" class="w-full h-full object-cover"
-                                        alt="">
-                                </div>
-                            </div>
-
-                            <div class="image overflow-hidden">
-                                <div class="reveal right custom-img aspect-square rounded-2xl  overflow-hidden">
-                                    <img src="assets/images/products/pro-2.jpeg" class="w-full h-full object-cover"
+                                    <img src="assets/images/products/pro-1.jpeg" class="w-full h-full  object-cover"
                                         alt="">
                                 </div>
                             </div>
 
                             <div class="image overflow-hidden">
                                 <div class="reveal top custom-img aspect-square rounded-2xl  overflow-hidden">
-                                    <img src="assets/images/products/pro-3.jpeg" class="w-full h-full object-cover"
+                                    <img src="assets/images/products/pro-2.jpeg" class="w-full h-full  object-cover"
                                         alt="">
                                 </div>
                             </div>
 
                             <div class="image overflow-hidden">
-                                <div class="reveal bottom custom-img aspect-square rounded-2xl overflow-hidden ">
-                                    <img src="assets/images/products/pro-4.jpeg" class="w-full h-full object-cover"
+                                <div class="reveal top custom-img aspect-square rounded-2xl  overflow-hidden">
+                                    <img src="assets/images/products/pro-3.jpeg" class="w-full h-full  object-cover"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="image overflow-hidden">
+                                <div class="reveal left custom-img aspect-square rounded-2xl overflow-hidden ">
+                                    <img src="assets/images/products/pro-4.jpeg" class="w-full h-full  object-cover"
                                         alt="">
                                 </div>
                             </div>
@@ -332,7 +342,7 @@
                     <span class="text-xs tracking-widest uppercase text-[#9c7c5d]">
                         Fine Jewellery
                     </span>
-                    <h2 class="text-4xl md:text-5xl font-light my-font text-[#2b1e16] mt-4">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#2b1e16] mt-4">
                         Explore Our Collection
                     </h2>
                     <p class="text-[#6b5c4d] mt-4">
@@ -344,15 +354,15 @@
                 <ul class="relative z-10 divide-y divide-[#d8cfc6]">
 
                     <!-- ITEM -->
-                    <li class="category-item group py-12 cursor-pointer relative">
+                    <li class="category-item group sm:py-12 py-8 cursor-pointer relative">
                         <a href="#" class="flex items-center justify-between relative">
 
                             <!-- LEFT CONTENT -->
                             <div>
-                                <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                <h3 class="sm:text-4xl text-2xl md:text-5xl split-text left font-light text-[#2b1e16]">
                                     Earrings
                                 </h3>
-                                <p class="mt-2 text-[#7a6a58] split-text left">
+                                <p class="mt-2 text-[#7a6a58] split-text left sm:text-base text-[13px]">
                                     Elegant designs for every occasion
                                 </p>
                             </div>
@@ -369,19 +379,19 @@
                             </div>
 
                             <!-- CURSOR IMAGE -->
-                            <img class="cursor-image" src="assets/images/products/pro-1.jpeg" alt="Earrings">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-1.jpeg" alt="Earrings">
                         </a>
                     </li>
 
                     <!-- Rings -->
-                    <li class="category-item group py-12 cursor-pointer relative">
+                    <li class="category-item group sm:py-12 py-8 cursor-pointer relative">
                         <a href="#" class="flex items-center justify-between">
 
                             <div>
-                                <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                <h3 class="sm:text-4xl text-2xl md:text-5xl split-text left font-light text-[#2b1e16]">
                                     Rings
                                 </h3>
-                                <p class="mt-2 text-[#7a6a58] split-text left">
+                                <p class="mt-2 text-[#7a6a58] split-text left sm:text-base text-[13px]">
                                     Crafted symbols of love and commitment
                                 </p>
                             </div>
@@ -396,19 +406,19 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image" src="assets/images/products/pro-2.jpeg" alt="Rings">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-2.jpeg" alt="Rings">
                         </a>
                     </li>
 
                     <!-- Necklaces -->
-                    <li class="category-item group py-12 cursor-pointer relative">
+                    <li class="category-item group sm:py-12 py-8 cursor-pointer relative">
                         <a href="#" class="flex items-center justify-between">
 
                             <div>
-                                <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                <h3 class="sm:text-4xl text-2xl md:text-5xl split-text left font-light text-[#2b1e16]">
                                     Necklaces
                                 </h3>
-                                <p class="mt-2 text-[#7a6a58] split-text left">
+                                <p class="mt-2 text-[#7a6a58] split-text left sm:text-base text-[13px]">
                                     Timeless elegance in every strand
                                 </p>
                             </div>
@@ -423,19 +433,19 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image" src="assets/images/products/pro-3.jpeg" alt="Necklaces">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-3.jpeg" alt="Necklaces">
                         </a>
                     </li>
 
                     <!-- Bracelets -->
-                    <li class="category-item group py-12 cursor-pointer relative">
+                    <li class="category-item group sm:py-12 py-8 cursor-pointer relative">
                         <a href="#" class="flex items-center justify-between">
 
                             <div>
-                                <h3 class="text-4xl md:text-5xl split-text left font-light text-[#2b1e16]">
+                                <h3 class="sm:text-4xl text-2xl md:text-5xl split-text left font-light text-[#2b1e16]">
                                     Bracelets
                                 </h3>
-                                <p class="mt-2 text-[#7a6a58] split-text left">
+                                <p class="mt-2 text-[#7a6a58] split-text left sm:text-base text-[13px]">
                                     Refined accents for modern style
                                 </p>
                             </div>
@@ -450,7 +460,7 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image" src="assets/images/products/pro-4.jpeg" alt="Bracelets">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-4.jpeg" alt="Bracelets">
                         </a>
                     </li>
 
@@ -467,7 +477,7 @@
                     <span class="text-xs tracking-widest uppercase text-[#9c7c5d]">
                         Popular Picks
                     </span>
-                    <h2 class="text-4xl md:text-5xl font-light my-font text-[#2b1e16] mt-4">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#2b1e16] mt-4">
                         Our Most Loved Jewellery
                     </h2>
                     <p class="text-[#6b5c4d] mt-4">
@@ -477,7 +487,7 @@
                 </div>
 
                 <!-- PRODUCT GRID -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-12">
+                <div class="grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-4 gap-5 gap-y-10 xl:gap-8  xl:gap-y-12">
 
                     <!-- PRODUCT CARD -->
                     <a href="#" class="group product-item inline-block relative cursor-pointer">
@@ -489,7 +499,7 @@
 
                         <!-- PRODUCT INFO -->
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Floral Necklace
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -508,7 +518,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Classic Gold Bangles
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -527,7 +537,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Drop Earrings
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -546,7 +556,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Solitaire Engagement Ring
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -567,7 +577,7 @@
 
                         <!-- PRODUCT INFO -->
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Floral Necklace
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -586,7 +596,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Classic Gold Bangles
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -605,7 +615,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Drop Earrings
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -624,7 +634,7 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="text-lg font-light text-[#2b1e16]">
+                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Solitaire Engagement Ring
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
@@ -663,7 +673,7 @@
                     Timeless by Design
                 </span>
 
-                <h2 class="split-text left text-5xl md:text-6xl font-light my-font text-[#f8f3ef] leading-tight">
+                <h2 class="split-text left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#f8f3ef] leading-tight">
                     Jewellery That <br class="hidden md:block">
                     Becomes Part of Your Story
                 </h2>
@@ -695,7 +705,7 @@
                         Client Testimonials
                     </span>
 
-                    <h2 class="text-4xl md:text-5xl font-light my-font text-[#2b1e16] mt-4">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#2b1e16] mt-4">
                         Words That Reflect Elegance
                     </h2>
 
@@ -707,7 +717,7 @@
 
 
                 <!-- Testimonials -->
-                <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 luxury-testimonials">
+                <div class="grid xl:gap-12 gap-6 sm:grid-cols-2 lg:grid-cols-3 luxury-testimonials">
 
                     <!-- CARD -->
                     <div
@@ -839,68 +849,76 @@
         </section>
 
         <!-- WHY CHOOSE US -->
-        <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-[#F7EFEA]">
-            <!-- FLOATING IMAGES (DESKTOP ONLY) -->
-            <div class="hidden lg:block absolute inset-0 pointer-events-none">
+        <section class="relative h-auto md:py-0 py-12 md:min-h-[80vh] lg:min-h-[85vh]
+         flex items-center justify-center overflow-hidden
+         bg-[#F7EFEA] px-4 sm:px-6">
+
+            <!-- FLOATING IMAGES (XL ONLY — 1366 SAFE) -->
+            <div class="hidden xl:block absolute inset-0 pointer-events-none">
 
                 <!-- LEFT IMAGE 1 -->
-                <img src="assets/images/products/pro-1.jpeg" class="floating-img absolute left-10 xl:left-60 top-32
-               w-36 xl:w-48 h-36 xl:h-48
-               rounded-2xl object-cover shadow-xl" alt="Jewellery Ring">
+                <img src="assets/images/products/pro-1.jpeg" alt="Jewellery Ring" class="absolute 2xl:left-60 left-11 top-32
+             w-48 h-48
+             rounded-2xl object-cover shadow-xl" />
 
                 <!-- LEFT IMAGE 2 -->
-                <img src="assets/images/products/pro-2.jpeg" class="floating-img absolute left-20 xl:left-72 top-[22rem]
-               w-40 xl:w-52 h-40 xl:h-52
-               rounded-2xl object-cover shadow-xl" alt="Gold Jewellery">
+                <img src="assets/images/products/pro-2.jpeg" alt="Gold Jewellery" class="absolute 2xl:left-72 xl:left-24 top-[22rem]
+             w-52 h-52
+             rounded-2xl object-cover shadow-xl" />
 
                 <!-- RIGHT IMAGE 1 -->
-                <img src="assets/images/products/pro-3.jpeg" class="floating-img absolute right-6 xl:right-64 top-40
-               w-32 xl:w-48 h-32 xl:h-48
-               rounded-2xl object-cover shadow-xl" alt="Diamond Closeup">
+                <img src="assets/images/products/pro-3.jpeg" alt="Diamond Closeup" class="absolute 2xl:right-64 right-24 top-40
+             w-48 h-48
+             rounded-2xl object-cover shadow-xl" />
 
                 <!-- RIGHT IMAGE 2 -->
-                <img src="assets/images/products/pro-4.jpeg" class="floating-img absolute right-14 xl:right-40 top-[26rem]
-              w-40 xl:w-52 h-40 xl:h-52
-              rounded-2xl object-cover shadow-xl" alt="Handcrafted Jewellery">
-
-
-
-
+                <img src="assets/images/products/pro-4.jpeg" alt="Handcrafted Jewellery" class="absolute 2xl:right-40 right-11 top-[26rem]
+             w-52 h-52
+             rounded-2xl object-cover shadow-xl" />
             </div>
 
-
             <!-- CENTER CONTENT -->
-            <div class="relative z-10 text-center max-w-3xl px-6">
+            <div class="relative z-10 text-center max-w-3xl w-full">
 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl my-font split-text left text-[#2b1e16] leading-tight">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+             my-font split-text text-[#2b1e16] leading-tight">
                     Why Choose Our Jewellery
                 </h2>
 
-                <p class="mt-6 text-base md:text-lg text-[#6b5c4d] max-w-2xl mx-auto">
+                <p class="mt-4 sm:mt-6
+             text-sm sm:text-base md:text-lg
+             text-[#6b5c4d]
+             max-w-2xl mx-auto">
                     Crafted with certified gold, ethically sourced diamonds,
                     and timeless artistry — every piece is designed to be cherished for generations.
                 </p>
 
                 <!-- TRUST POINTS -->
-                <div
-                    class="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-6 text-xs md:text-sm uppercase tracking-widest text-[#9c7c5d]">
+                <div class="mt-8 sm:mt-10
+             flex flex-wrap justify-center gap-x-8 gap-y-4
+             text-[10px] sm:text-xs md:text-sm
+             uppercase tracking-widest text-[#9c7c5d]">
                     <span>Hallmarked Gold</span>
                     <span>Handcrafted</span>
+                    <span>Ethically Sourced</span>
                 </div>
 
-
-
-                <!-- SHORT STORY / BRAND VALUE -->
-                <p class="mt-10 text-sm md:text-base text-[#6b5c4d] max-w-2xl mx-auto leading-relaxed">
+                <!-- BRAND STORY -->
+                <p class="mt-8 sm:mt-10
+             text-sm sm:text-base
+             text-[#6b5c4d]
+             max-w-2xl mx-auto leading-relaxed">
                     Each creation is thoughtfully designed by master artisans,
                     blending heritage techniques with modern aesthetics.
                     From everyday elegance to heirloom pieces, our jewellery
                     celebrates moments that matter most.
                 </p>
 
-                <!-- STATS / HIGHLIGHTS -->
-                <div class="mt-12 grid grid-cols-3 gap-6 max-w-xl mx-auto text-[#2b1e16]">
-
+                <!-- STATS -->
+                <div class="mt-10 sm:mt-12
+             grid grid-cols-1 sm:grid-cols-3
+             gap-6 sm:gap-8
+             max-w-xl mx-auto text-[#2b1e16]">
                     <div>
                         <p class="text-2xl md:text-3xl font-semibold">25+</p>
                         <p class="mt-1 text-xs uppercase tracking-widest text-[#9c7c5d]">
@@ -921,11 +939,9 @@
                             Certified Gold
                         </p>
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
         <!-- BLOGS -->
@@ -953,7 +969,7 @@
                 </div>
 
                 <!-- BLOG GRID -->
-                <div class="grid lg:grid-cols-3 gap-12">
+                <div class="grid lg:grid-cols-3 xl:gap-12 gap-8">
 
                     <!-- FEATURED BLOG -->
                     <article class="blog-card lg:col-span-2 relative group overflow-hidden rounded-[2rem]">
@@ -1040,7 +1056,7 @@
         <div class="container mx-auto px-6 py-20">
 
             <!-- MAIN GRID -->
-            <div class="grid gap-14 lg:grid-cols-4">
+            <div class="grid gap-14 grid-cols-2 md:grid-cols-4">
 
                 <!-- BRAND -->
                 <div>
