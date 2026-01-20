@@ -13,7 +13,7 @@
     <meta property="og:description"
         content="Explore exquisite gold, diamond & bridal jewellery crafted with timeless elegance.">
     <meta property="og:type" content="website">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -33,7 +33,7 @@
                     <!-- Nav Links -->
                     <ul class="flex gap-4 text-gray-800 font-medium items-center">
                         <li>
-                            <a href="#"
+                            <a href="index.html"
                                 class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
                                 Home
                                 <span
@@ -42,7 +42,7 @@
                         </li>
 
                         <li>
-                            <a href="#"
+                            <a href="about.html"
                                 class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
                                 About Us
                                 <span
@@ -51,7 +51,7 @@
                         </li>
 
                         <li class="relative group m-2 mr-0">
-                            <a href="#"
+                            <a href="product.html"
                                 class="relative transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)] align-content-center">
                                 Products<i class="ri-arrow-drop-down-fill text-xl leading-1 hidden xl:inline-block"></i>
                                 <span
@@ -60,28 +60,28 @@
 
                             <!-- Dropdown Menu -->
                             <ul
-                                class="absolute left-0 top-10 min-w-50 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 border border-gray-200 z-10 overflow-hidden pb-2 pt-1">
+                                class="absolute left-0 top-10 min-w-48 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 border border-gray-200 z-10 overflow-hidden pb-2 pt-1">
                                 <li>
-                                    <a href="#"
+                                    <a href="product.html"
                                         class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Earrings</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="product.html"
                                         class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Necklace</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="product.html"
                                         class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Rings</a>
                                 </li>
                                 <li>
-                                    <a href="#"
+                                    <a href="product.html"
                                         class="block text-sm px-4 py-[6px] text-gray-700 hover:text-[var(--secondary-color)] hover:bg-slate-100 transition-all">Bracelets</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="#"
+                            <a href="blog.html"
                                 class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
                                 Blogs
                                 <span
@@ -90,7 +90,7 @@
                         </li>
 
                         <li>
-                            <a href="#"
+                            <a href="contact.html"
                                 class="relative group m-2 transition-all duration-300 text-gray-700 hover:text-[var(--secondary-color)]">
                                 Contact Us
                                 <span
@@ -100,12 +100,12 @@
                     </ul>
 
                     <!-- Button -->
-                    <a class="btn1" href="#">
+                    <button onclick="openApplyModal()" class="btn1" href="#">
                         <span class="top-key"></span>
                         <span class="text">Enquiry Now</span>
                         <span class="bottom-key-1"></span>
                         <span class="bottom-key-2"></span>
-                    </a>
+                    </button>
                 </div>
             </nav>
 
@@ -139,12 +139,12 @@
 
                 <!-- Menu Items -->
                 <ul class="flex flex-col divide-y divide-dotted divide-gray-300">
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Home</a>
+                    <li><a href="index.html" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Home</a>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">About
+                    <li><a href="about.html" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">About
                             Us</a>
                     </li>
-                     <li class="relative">
+                    <li class="relative">
                         <button class="w-full px-5 py-3 flex justify-between items-center dropdown-toggle">
                             <span>Products</span>
                             <i class="ri-arrow-down-s-line text-xl transition-transform duration-300"></i>
@@ -152,17 +152,21 @@
 
                         <ul
                             class="submenu max-h-0 overflow-hidden transition-all duration-300 bg-gray-50 pl-10 list-disc">
-                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">All Products</a></li>
-                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Necklace</a></li>
-                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Rings</a></li>
-                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Earrings</a></li>
-                            <li><a href="#" class="block py-2 text-sm hover:text-[var(--primary-color)]">Bracelet</a></li>
+                            <li><a href="product.html" class="block py-2 text-sm hover:text-[var(--primary-color)]">All
+                                    Products</a></li>
+                            <li><a href="product.html" class="block py-2 text-sm hover:text-[var(--primary-color)]">Necklace</a>
+                            </li>
+                            <li><a href="product.html" class="block py-2 text-sm hover:text-[var(--primary-color)]">Rings</a></li>
+                            <li><a href="product.html" class="block py-2 text-sm hover:text-[var(--primary-color)]">Earrings</a>
+                            </li>
+                            <li><a href="product.html" class="block py-2 text-sm hover:text-[var(--primary-color)]">Bracelet</a>
+                            </li>
                         </ul>
                     </li>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Blogs</a>
+                    <li><a href="blog.html" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Blogs</a>
                     </li>
-                    <li><a href="#" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Contact
+                    <li><a href="contact.html" class="block px-5 py-3 text-gray-800 hover:text-[var(--secondary-color)]">Contact
                             Us</a></li>
                 </ul>
 
@@ -326,7 +330,8 @@
                             </div>
 
                             <!-- CURSOR IMAGE -->
-                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-1.jpeg" alt="Earrings">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-1.jpeg"
+                                alt="Earrings">
                         </a>
                     </li>
 
@@ -353,7 +358,8 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-2.jpeg" alt="Rings">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-2.jpeg"
+                                alt="Rings">
                         </a>
                     </li>
 
@@ -380,7 +386,8 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-3.jpeg" alt="Necklaces">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-3.jpeg"
+                                alt="Necklaces">
                         </a>
                     </li>
 
@@ -407,7 +414,8 @@
                                 </svg>
                             </div>
 
-                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-4.jpeg" alt="Bracelets">
+                            <img class="cursor-image hidden xl:inline-block" src="assets/images/products/pro-4.jpeg"
+                                alt="Bracelets">
                         </a>
                     </li>
 
@@ -446,14 +454,12 @@
 
                         <!-- PRODUCT INFO -->
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Floral Necklace
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 18K Gold · Diamonds
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹1,25,000
                             </p>
                         </div>
                     </a>
@@ -465,14 +471,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Classic Gold Bangles
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 22K Gold
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹98,000
                             </p>
                         </div>
                     </a>
@@ -484,14 +488,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Drop Earrings
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 18K Gold · Diamonds
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹72,000
                             </p>
                         </div>
                     </a>
@@ -503,14 +505,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Solitaire Engagement Ring
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 Platinum · Diamond
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹1,45,000
                             </p>
                         </div>
                     </a>
@@ -524,14 +524,12 @@
 
                         <!-- PRODUCT INFO -->
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Floral Necklace
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 18K Gold · Diamonds
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹1,25,000
                             </p>
                         </div>
                     </a>
@@ -543,14 +541,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Classic Gold Bangles
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 22K Gold
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹98,000
                             </p>
                         </div>
                     </a>
@@ -562,14 +558,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Diamond Drop Earrings
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 18K Gold · Diamonds
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹72,000
                             </p>
                         </div>
                     </a>
@@ -581,14 +575,12 @@
                                 class="aspect-square rounded-2xl object-cover transition-transform duration-700">
                         </div>
                         <div class="pt-5 text-center">
-                            <h3 class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
+                            <h3
+                                class="md:text-lg text-base text-ellipsis line-clamp-1 overflow-hidden align-middle  font-light text-[#2b1e16]">
                                 Solitaire Engagement Ring
                             </h3>
                             <p class="text-sm text-[#6b5c4d] mt-1">
                                 Platinum · Diamond
-                            </p>
-                            <p class="text-base text-[#2b1e16] mt-2 font-medium">
-                                ₹1,45,000
                             </p>
                         </div>
                     </a>
@@ -620,7 +612,8 @@
                     Timeless by Design
                 </span>
 
-                <h2 class="split-text left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#f8f3ef] leading-tight">
+                <h2
+                    class="split-text left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light my-font text-[#f8f3ef] leading-tight">
                     Jewellery That <br class="hidden md:block">
                     Becomes Part of Your Story
                 </h2>
@@ -828,7 +821,7 @@
             <div class="relative z-10 text-center max-w-3xl w-full">
 
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-             my-font split-text text-[#2b1e16] leading-tight">
+             my-font split-text left text-[#2b1e16] leading-tight">
                     Why Choose Our Jewellery
                 </h2>
 
@@ -927,12 +920,12 @@
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
-                        <div class="absolute bottom-0 p-10 text-white max-w-lg">
+                        <div class="absolute bottom-0 p-10 text-white max-w-4xl">
                             <span class="text-xs uppercase tracking-widest text-[#e6c9a8]">
                                 Craftsmanship
                             </span>
 
-                            <h3 class="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-snug">
+                            <h3 class="mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif leading-snug">
                                 Inside the Art of Handcrafted Jewellery
                             </h3>
 
@@ -1003,7 +996,7 @@
         <div class="container mx-auto px-6 py-20">
 
             <!-- MAIN GRID -->
-            <div class="grid gap-14 grid-cols-1 sm:grid-cols-4">
+            <div class="grid gap-14 grid-cols-1 sm:grid-cols-2">
 
                 <!-- BRAND -->
                 <div>
@@ -1028,10 +1021,10 @@
                     </h4>
 
                     <ul class="space-y-4 text-sm">
-                        <li><a href="#" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blogs</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -1042,10 +1035,10 @@
                     </h4>
 
                     <ul class="space-y-4 text-sm">
-                        <li><a href="#" class="hover:text-white transition">Rings</a></li>
-                        <li><a href="#" class="hover:text-white transition">Necklaces</a></li>
-                        <li><a href="#" class="hover:text-white transition">Earrings</a></li>
-                        <li><a href="#" class="hover:text-white transition">Bridal Jewellery</a></li>
+                        <li><a href="product.html" class="hover:text-white transition">Rings</a></li>
+                        <li><a href="product.html" class="hover:text-white transition">Necklaces</a></li>
+                        <li><a href="product.html" class="hover:text-white transition">Earrings</a></li>
+                        <li><a href="product.html" class="hover:text-white transition">Bridal Jewellery</a></li>
                     </ul>
                 </div>
 
@@ -1056,15 +1049,15 @@
                     </h4>
 
                     <div class="mt-4 text-sm space-y-2 flex flex-col">
-                        <a href="#">+91 98765 43210</a>
-                        <a href="#">support@gmail.com</a>
+                        <a href="tel:">+91 98765 43210</a>
+                        <a href="mailto:">support@gmail.com</a>
                     </div>
                     <p class="text-sm leading-relaxed mt-4">
                         12 Park Street, Kolkata, West Bengal
                     </p>
 
 
-                    <div class="mt-6 flex gap-4 text-[#9c7c5d]">
+                    <div class="mt-6 flex gap-4 flex-wrap text-[#9c7c5d]">
                         <a href="#" class="hover:text-white transition">Instagram</a>
                         <a href="#" class="hover:text-white transition">Facebook</a>
                     </div>
@@ -1089,7 +1082,102 @@
     </footer>
 
 
+    <!-- Backdrop -->
+    <div id="applyBackdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity"
+        onclick="closeApplyModal()"></div>
 
+    <!-- Modal -->
+    <div id="applyModal" class="fixed inset-0 z-50 hidden items-center justify-center px-4">
+
+        <div class="relative sm:w-[75%] w-[95%]  md:max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden
+              transform scale-95 opacity-0 transition-all duration-300
+              grid grid-cols-1 md:grid-cols-2">
+
+            <!-- Left Image -->
+            <div class="hidden md:block bg-teal-600">
+                <img src="assets/images/products/pro-2.jpeg" alt="Modal Image"
+                    class="h-full w-full object-cover aspect-square">
+            </div>
+
+            <!-- Right Form -->
+            <div class="p-4 sm:p-6">
+                <button onclick="closeApplyModal()"
+                    class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl cursor-pointer">
+                    <i class="ri-close-line text-red-500 text-2xl"></i>
+                </button>
+
+                <h3 class="text-xl font-semibold my-font text-gray-900">
+                    Product Enquiry
+                </h3>
+
+                <form class="mt-4 space-y-6">
+
+                    <!-- Full Name -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Full Name
+                        </label>
+                        <input type="text" required class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Email Address
+                        </label>
+                        <input type="email" required class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                            Phone Number
+                        </label>
+                        <input type="tel" required class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    </div>
+
+                    <!-- Course -->
+                    <div class="flex flex-col">
+                        <label for="course" class="text-sm font-medium mb-2">
+                            Select Product
+                        </label>
+
+                        <div class="relative">
+                            <select id="course" name="course" required class="w-full appearance-none rounded-lg border border-gray-300
+                   px-4 py-3 pr-10 text-sm bg-white
+                   focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                <option value="">Select Product</option>
+                                <option>Jewellery 1</option>
+                                <option>Jewellery 2</option>
+                                <option>Jewellery 3</option>
+                                <option>Jewellery 4</option>
+                                <option>Jewellery 5</option>
+                                <option>Jewellery 6</option>
+                                <option>Jewellery 7</option>
+                                <option>Jewellery 8</option>
+                                <option>Jewellery 9</option>
+                                <option>Jewellery 10</option>
+                            </select>
+
+                            <!-- Remix Icon Arrow -->
+                            <i class="ri-arrow-down-s-line absolute right-3 top-1/2 -translate-y-1/2
+                   text-gray-500 pointer-events-none text-lg">
+                            </i>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit"
+                        class="w-full px-5 py-3 bg-[#2b1e16] text-white text-xs tracking-[0.35em] uppercase transition hover:bg-[#3a2a20]">
+                        Submit Query
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
 
 
 
